@@ -209,6 +209,7 @@ p {
   color: var(--clr-white);
   border-radius: 2em;
   margin-bottom: 1em;
+  margin-top: 1em;
 }
 .summary-container a:is(:hover, :focus) {
   background-color: hsl(224, 30%, 17%);
@@ -241,7 +242,9 @@ p {
 
     margin-inline: auto;
   }
-
+  .summary__score .box {
+    margin: 0.5em 0;
+  }
   .summary-container {
   }
 }
