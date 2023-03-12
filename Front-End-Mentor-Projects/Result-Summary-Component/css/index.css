@@ -1,0 +1,247 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  --ff: "Hanken Grotesk", sans-serif;
+
+  --ff-weights-regular: 500;
+  --ff-weights-semi: 700;
+  --ff-weights-bold: 800;
+
+  --gdt-bg-purple: hsl(252, 100%, 67%);
+  --gdt-bg-blue: hsl(241, 81%, 54%);
+
+  --gdt-circle-violetblue: hsla(256, 72%, 46%, 1);
+  --gdt-circle-persianblue: hsla(241, 72%, 46%, 0);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-paleblue: hsl(221, 100%, 96%);
+  --clr-lavender: hsl(241, 100%, 89%);
+  --clr-darkgrayblue: hsl(224, 30%, 27%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+  font-family: var(--ff);
+  font-size: 1.125rem;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.main-container {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+}
+.result-container {
+  width: 100%;
+  color: var(--clr-white);
+  text-align: center;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  padding: 2rem;
+  border-radius: 0 0 2em 2em;
+}
+.result-container h1 {
+  font-size: 1.5em;
+  font-weight: var(--ff-weights-semi);
+}
+.result-container h2 {
+  font-size: 1.1em;
+  font-weight: var(--ff-weights-semi);
+}
+.result-container :is(h2, .circle__100, p) {
+  color: var(--clr-lavender);
+}
+.circle {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  margin-inline: auto;
+  margin: 1em auto;
+  background: radial-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.circle span {
+  display: block;
+}
+.circle__score {
+  font-size: 2.5em;
+  font-weight: var(--ff-weights-bold);
+}
+.circle__100 {
+  font-size: 0.7em;
+  font-weight: var(--ff-weights-bold);
+}
+
+p {
+  font-size: 0.95rem;
+}
+
+.summary-container {
+  width: 100%;
+  padding: 0 2em;
+}
+.summary-container h2 {
+  color: var(--clr-darkgrayblue);
+  font-size: 1em;
+  font-weight: var(--ff-weights-semi);
+  margin: 1em 0;
+}
+.summary__score {
+  margin-bottom: 2em;
+}
+.summary__score .box {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+  align-items: center;
+  width: 100%;
+  padding: 0.5em;
+  margin: 1.15em 0;
+  border-radius: 0.5em;
+}
+.reaction {
+  background-color: hsl(0, 100%, 98%);
+}
+.box__reaction {
+  color: hsl(0, 100%, 67%);
+}
+.memory {
+  background-color: hsl(39, 100%, 95%);
+}
+.box__memory {
+  color: hsl(39, 100%, 56%);
+}
+.verbal {
+  background-color: hsl(166, 100%, 97%);
+}
+.box__verbal {
+  color: hsl(166, 100%, 37%);
+}
+.visual {
+  background-color: hsl(234, 85%, 95%);
+}
+.box__visual {
+  color: hsl(234, 85%, 45%);
+}
+.box__score-container {
+  color: var(--clr-lavender);
+  font-size: 0.9em;
+}
+.box__score {
+  color: var(--clr-darkgrayblue);
+  font-weight: var(--ff-weights-semi);
+}
+.summary-container a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 0px;
+  background-color: var(--clr-darkgrayblue);
+  color: var(--clr-white);
+  border-radius: 2em;
+  margin-bottom: 1em;
+}
+.summary-container a:is(:hover, :focus) {
+  background-color: hsl(224, 30%, 17%);
+  color: hsl(0, 0%, 80%);
+}
+@media screen and (min-width: 1440px) {
+  body {
+  }
+  .main-container {
+    width: max(50vw, 50%);
+    grid-auto-flow: column;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--clr-white);
+    border-radius: 1em;
+
+    overflow: hidden;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .result-container {
+    height: 100%;
+    border-radius: 0;
+  }
+  .result-container p {
+    width: 32ch;
+
+    margin-inline: auto;
+  }
+
+  .summary-container {
+  }
+}
