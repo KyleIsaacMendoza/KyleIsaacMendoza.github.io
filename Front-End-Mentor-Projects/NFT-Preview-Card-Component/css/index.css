@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+:root {
+  --ff-main: "Outfit", sans-serif;
+  --fw-regular: 300;
+  --fw-semi: 400;
+  --fw-bold: 600;
+
+  --clr-primary-blue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl(178, 100%, 50%);
+
+  --clr-neutral-main-bg: hsl(217, 54%, 11%);
+  --clr-neutral-card-bg: hsl(216, 50%, 16%);
+  --clr-neutral-line: hsl(215, 32%, 27%);
+
+  --clr-neutral-white: hsl(0, 0%, 100%);
+
+  --fs-main: 18px;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  min-height: 100%;
+  font-size: var(--fs-main);
+  font-family: var(--ff-main);
+  background-color: var(--clr-neutral-main-bg);
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  font-size: var(--fs-main);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Main Container */
+.main-container {
+  width: min(90%, 360px); /* mobile width start*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: var(--clr-neutral-card-bg);
+
+  border-radius: 1em;
+}
+
+.image-container {
+  width: 90%;
+  position: relative;
+
+  margin: 1em auto;
+
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.image-container__view,
+.image-container__view img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.image-container__view {
+  width: 100%;
+  height: 100%;
+}
+.image-container__view img {
+  display: none;
+}
+.image-container__view:is(:active, :focus-within) {
+  background-color: hsla(178, 100%, 50%, 0.3);
+}
+.image-container__view:is(:active, :focus-within) img {
+  display: block;
+}
+/* * Info-Container */
+.info-container {
+  width: 90%;
+
+  margin: 0 auto;
+}
+.info-container h1 {
+  font-size: 1.25rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-white);
+}
+
+.info-container p {
+  margin-top: 0.5em;
+  color: var(--clr-primary-blue);
+}
+
+.info-container__ETH {
+  display: flex;
+  flex-wrap: wrap;
+
+  flex-flow: row;
+
+  justify-content: space-between;
+
+  margin: 1em 0;
+}
+.info-container__ETH img {
+  display: inline-block;
+}
+.eth {
+  font-weight: var(--fw-bold);
+}
+.days {
+  font-weight: var(--fw-semi);
+}
+/* hr */
+hr {
+  border: 1px solid hsla(215, 51%, 70%, 0.3);
+}
+/* info-container profile */
+
+.info-container__profile {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  margin: 1em 0 1.3em;
+  font-weight: var(--fw-semi);
+}
+
+.info-container__profile img {
+  display: inline-block;
+
+  width: 2em;
+
+  margin-right: 0.8em;
+  border: 1px solid var(--clr-neutral-white);
+  border-radius: 50%;
+}
+
+.creator {
+  text-decoration: none;
+
+  color: var(--clr-neutral-white);
+}
+.creator:hover {
+  color: var(--clr-primary-cyan);
+}
+
+/* color text */
+.info-container p,
+.days,
+.info-container__profile span {
+  color: var(--clr-primary-blue);
+}
+.eth {
+  color: var(--clr-primary-cyan);
+}
