@@ -111,12 +111,13 @@ h6 {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
 .image__profile img {
   width: 25%;
   border-radius: 50%;
   border: 5px solid white;
   position: absolute;
-  top: 100%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -184,6 +185,9 @@ h6 {
 @media screen and (max-width: 375px) {
   .image-container {
     height: 15vh;
+  }
+  .image__profile img {
+    top: 100%;
   }
   .social-numbers {
     padding: 1em 0;
