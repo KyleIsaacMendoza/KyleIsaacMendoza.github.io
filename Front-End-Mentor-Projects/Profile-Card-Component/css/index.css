@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --ff-main: "Kumbh Sans", sans-serif;
+  --fs-main: 1.125rem;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  min-height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+
+  background-color: var(--dark-cyan);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.main-container {
+  width: min(90%, 400px);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 1em;
+  overflow: hidden;
+
+  background-color: white;
+  z-index: 1;
+}
+
+.image-container {
+  width: 100%;
+  height: 20vh;
+  position: relative;
+  background-image: url(/Front-End-Mentor-Projects/Profile-Card-Component/profile-card-component-main/profile-card-component-main/images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.image__profile img {
+  width: 25%;
+  border-radius: 50%;
+  border: 5px solid white;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-container {
+  width: 100%;
+  padding: 2.8em 0 0;
+
+  text-align: center;
+}
+.profile {
+  padding: 0 0 1em;
+  border-bottom: 1px solid var(--dark-gray);
+}
+.profile__name {
+  font-weight: var(--fw-bold);
+  font-size: 1.2em;
+}
+.profile__age {
+  font-size: 1.2em;
+}
+.profile__age,
+.profile__location {
+  color: var(--dark-gray);
+}
+.profile__location {
+  display: block;
+}
+.social-numbers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 2em 0;
+}
+.social-numbers span {
+  display: block;
+}
+.socials__count {
+  font-weight: var(--fw-bold);
+  font-size: 1.2em;
+}
+.social__title {
+  color: var(--dark-gray);
+  letter-spacing: 0.125em;
+  font-size: 0.725em;
+}
+
+.socials__count,
+.profile__name {
+  color: var(--very-dark-desaturated-blue);
+}
+
+.pattern-above img {
+  position: fixed;
+  top: -60%;
+  left: -15%;
+}
+
+.pattern-bottom img {
+  position: fixed;
+  bottom: -80%;
+  right: -25%;
+}
+
+@media screen and (max-width: 375px) {
+  .image-container {
+    height: 15vh;
+  }
+  .social-numbers {
+    padding: 1em 0;
+  }
+
+  .pattern-above img {
+    position: fixed;
+    top: -15%;
+    left: -35%;
+  }
+
+  .pattern-bottom img {
+    position: fixed;
+    bottom: -8%;
+    right: -40%;
+  }
+}
