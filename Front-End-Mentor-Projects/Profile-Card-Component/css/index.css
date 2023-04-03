@@ -185,16 +185,4 @@ h6 {
   .social-numbers {
     padding: 1em 0;
   }
-
-  .pattern-above img {
-    position: fixed;
-    top: -15%;
-    left: -35%;
-  }
-
-  .pattern-bottom img {
-    position: fixed;
-    bottom: -8%;
-    right: -40%;
-  }
 }
