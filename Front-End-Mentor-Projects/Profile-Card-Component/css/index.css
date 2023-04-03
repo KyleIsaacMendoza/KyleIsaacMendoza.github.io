@@ -49,7 +49,6 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-color: hsl(185deg, 75%, 39%);
 
-  background-color: var(--dark-cyan);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
