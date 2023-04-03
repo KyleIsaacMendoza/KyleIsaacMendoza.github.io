@@ -43,6 +43,11 @@ body {
 body {
   font-family: var(--ff-main);
   font-size: var(--fs-main);
+  background: url(/Front-End-Mentor-Projects/Profile-Card-Component/profile-card-component-main/profile-card-component-main/images/bg-pattern-top.svg),
+    url(/Front-End-Mentor-Projects/Profile-Card-Component/profile-card-component-main/profile-card-component-main/images/bg-pattern-bottom.svg);
+  background-position: right 52vw bottom 35vh, left 48vw top 52vh;
+  background-repeat: no-repeat, no-repeat;
+  background-color: hsl(185deg, 75%, 39%);
 
   background-color: var(--dark-cyan);
   line-height: 1.5;
@@ -117,7 +122,7 @@ h6 {
   border-radius: 50%;
   border: 5px solid white;
   position: absolute;
-  top: 90%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -168,18 +173,6 @@ h6 {
 .socials__count,
 .profile__name {
   color: var(--very-dark-desaturated-blue);
-}
-
-.pattern-above img {
-  position: fixed;
-  top: -60%;
-  left: -15%;
-}
-
-.pattern-bottom img {
-  position: fixed;
-  bottom: -80%;
-  right: -25%;
 }
 
 @media screen and (max-width: 375px) {
