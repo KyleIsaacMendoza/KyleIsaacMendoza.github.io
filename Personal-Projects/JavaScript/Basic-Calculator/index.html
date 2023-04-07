@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="#" id="myForm">
+          <h1>Basic Calculator: Lvl 1</h1>
+          <label for="number1">Number 1: </label>
+          <input type="text" id="number1" placeholder="Input a number" />
+          <!-- operator -->
+          <label for="operator">Operator: </label>
+          <input type="text" id="operator" placeholder="+,-,*,/" />
+
+          <label for="number2">Number 2: </label>
+          <input type="text" id="number2" placeholder="Input a number" /><br />
+
+          <div class="button-container">
+            <button onclick="calculate()">Compute</button>
+            <input type="reset" value="Reset" id="reset" />
+          </div>
+
+          <label for="result"
+            >Result: <input type="text" id="result" readonly
+          /></label>
+        </form>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

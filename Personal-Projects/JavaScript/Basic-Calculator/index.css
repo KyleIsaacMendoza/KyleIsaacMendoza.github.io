@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Pattaya&display=swap");
+:root {
+  --ff-main: "Inter", sans-serif;
+  --ff-head: "Pattaya", sans-serif;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  min-height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  font-family: var(--ff-main);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+label {
+  font-weight: bold;
+}
+h1 {
+  font-family: var(--ff-head);
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+button,
+#reset {
+  display: inline-block;
+  width: 49%;
+
+  margin-inline: auto;
+  color: rgb(3, 61, 82);
+
+  border-radius: 0.5em;
+}
+.container {
+  width: min(90%, 400px);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+
+  border-radius: 1em;
+  background-color: rgb(3, 61, 82);
+
+  color: white;
+}
+#myForm {
+  display: flex;
+  flex-flow: wrap column;
+  padding: 1em 2em 3em;
+}

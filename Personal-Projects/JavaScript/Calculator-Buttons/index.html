@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Buttons</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <form action="#" id="myForm">
+          <h1>Basic Calculator Buttons</h1>
+          <label for="number1">Number 1: </label>
+          <input
+            type="text"
+            id="number1"
+            placeholder="&nbsp;Input a Number"
+            name="number1"
+          />
+
+          <div class="operator-container">
+            <input type="button" value="+" onclick="setOperator('+')" />
+            <input type="button" value="-" onclick="setOperator('-')" />
+            <input type="button" value="x" onclick="setOperator('*')" />
+            <input type="button" value="/" onclick="setOperator('/')" />
+          </div>
+
+          <label for="number2">Number 2: </label>
+          <input
+            type="text"
+            id="number2"
+            placeholder="&nbsp;Input a Number"
+            name="number2"
+          /></br>
+
+          <label for="result">Result: </label>
+          <input type="text" id="result" readonly name="result"/>
+
+          <div class="button-container">
+            <input type="button" value="Compute" onclick="compute()" />
+            <input type="reset" value="Reset" />
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
