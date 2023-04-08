@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1.5;
+  font-size: 1.125rem;
+}
+.main-container {
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  overflow: hidden;
+
+  border-radius: 1em;
+
+  padding: 2em;
+
+  background-color: gray;
+}
+.result-container {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.button-container {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.button-container input {
+  padding: 0.5em 1.5em;
+}
