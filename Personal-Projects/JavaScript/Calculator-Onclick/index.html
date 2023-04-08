@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator All Buttons</title>
+    <link
+      rel="stylesheet"
+      href="/Personal-Projects/JavaScript/Calculator-Onclick/index.css"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <form action="#" id="myForm">
+          <input type="text" name="result" id="result" readonly />
+
+          <div class="container__first-row">
+            <input type="button" value="AC" onclick="clearInput()" />
+            <input type="button" value="DEL" onclick="deleteInput()" />
+            <input type="button" value="/" onclick="setOperator('/')" />
+            <input type="button" value="X" onclick="setOperator('*')" />
+          </div>
+
+          <div class="container__second-row">
+            <input type="button" value="7" onclick="addNumber(7)" />
+            <input type="button" value="8" onclick="addNumber(8)" />
+            <input type="button" value="9" onclick="addNumber(9)" />
+            <input type="button" value="-" onclick="setOperator('-')" />
+          </div>
+
+          <div class="container__third-row">
+            <input type="button" value="4" onclick="addNumber(4)" />
+            <input type="button" value="5" onclick="addNumber(5)" />
+            <input type="button" value="6" onclick="addNumber(6)" />
+            <input type="button" value="+" onclick="setOperator('+')" />
+          </div>
+
+          <div class="container__fourth-row">
+            <input type="button" value="1" onclick="addNumber(1)" />
+            <input type="button" value="2" onclick="addNumber(2)" />
+            <input type="button" value="3" onclick="addNumber(3)" />
+            <input type="button" value="=" id="equal" onclick="compute()" />
+          </div>
+
+          <div class="container__fifth-row">
+            <input type="button" value="0" onclick="addNumber(0)" />
+            <input type="button" value="." onclick="addDecimal()" />
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  min-height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.main-container {
+  width: min(90%, 350px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: gray;
+  padding: 2em;
+
+  border-radius: 1em;
+  overflow: hidden;
+}
+#myForm {
+  display: grid;
+  grid-template:
+    "first"
+    "second"
+    "third"
+    "fourth"
+    "fifth";
+  gap: 0.5rem;
+}
+h1 {
+  text-align: center;
+  color: white;
+}
+#result {
+  width: 100%;
+  text-align: right;
+}
+.form__first-row,
+.form__second-row,
+.form__third-row,
+.form__fourth-row {
+  width: 100%;
+
+  display: inline-grid;
+  grid-auto-flow: column;
+
+  gap: 0.2rem;
+}
+.form__fifth-row {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+#decimal {
+  width: 23.5%;
+}
+#zero {
+  width: 75%;
+}
+input[type="button"] {
+  margin: 0;
+  padding: 0.5rem;
+}
