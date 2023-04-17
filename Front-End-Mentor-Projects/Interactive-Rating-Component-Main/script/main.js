@@ -15,7 +15,7 @@ myForm.addEventListener("submit", (event) => {
 
   review[0].style.display = "block";
   main[0].style.display = "none";
-  rating_score.textContent = "You selected " + value + " out of 5";
+  rating_score.textContent = `You selected ${value} out of 5`;
 });
 
 //adding event for every button
