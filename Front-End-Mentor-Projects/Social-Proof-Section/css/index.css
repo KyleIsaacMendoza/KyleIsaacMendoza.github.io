@@ -36,7 +36,7 @@ body {
 .main-container {
   width: 70vw;
   margin-inline: auto;
-  margin-top: 11em;
+  margin-top: 8em;
 }
 
 /* *<----------------- HEADING-----------------> */
@@ -156,6 +156,7 @@ body {
 .profile__comments {
   margin: 2em;
   font-weight: var(--fw-semi);
+  text-align: justify;
 }
 
 .profile__box:nth-child(2) {
