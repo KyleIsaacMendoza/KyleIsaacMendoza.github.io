@@ -65,7 +65,7 @@ body {
 /* *<----------------- RATE_CONTAINER -----------------> */
 .rate {
   margin-top: 2em;
-  margin-left: 4em;
+  margin-left: 0em;
 }
 
 .rate-container {
@@ -73,9 +73,10 @@ body {
   background-color: var(--clr-light-grayish-magenta);
   width: 70%;
 
-  padding: 0.8em 2em;
+  padding: 0.8em 1em;
 
   font-weight: var(--fw-semi);
+  font-size: 0.8em;
   margin-bottom: 1em;
   border-radius: 0.5em;
 }
@@ -86,7 +87,7 @@ body {
 
 .rate-container h2 {
   font-size: 1.125em;
-  margin-left: 1.5em;
+  margin-left: 1em;
 }
 
 .rate-container img,
