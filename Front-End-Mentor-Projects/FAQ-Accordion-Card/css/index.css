@@ -1,0 +1,30 @@
+/* *Root CSS */
+
+:root {
+  /* Text */
+  --clr-dark-saturated-blue: hsl(238, 29%, 16%);
+  --clr-soft-red: hsl(14, 88%, 65%);
+
+  /* For Gradient */
+  --clr-violet: hsl(273, 75%, 66%);
+  --clr-blue: hsl(240, 73%, 65%);
+
+  /* Text 2 */
+  --clr-vd-grayish-blue: hsl(237, 12%, 33%);
+  --clr-dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --clr-light-grayish-blue: hsl(240, 5%, 91%);
+
+  /* Fonts */
+  --ff-main: "Kumbh Sans", sans-serif;
+  --fs-main: 12px;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-main);
+  background-image: linear-gradient(var(--clr-violet), var(--clr-blue));
+}
