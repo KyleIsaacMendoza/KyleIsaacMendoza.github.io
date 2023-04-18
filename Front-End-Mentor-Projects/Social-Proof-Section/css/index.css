@@ -34,9 +34,9 @@ body {
 
 /* *<----------------- MAIN_CONTAINER -----------------> */
 .main-container {
-  width: 60vw;
+  width: 70vw;
   margin-inline: auto;
-  margin-top: 13em;
+  margin-top: 11em;
 }
 
 /* *<----------------- HEADING-----------------> */
@@ -65,15 +65,15 @@ body {
 /* *<----------------- RATE_CONTAINER -----------------> */
 .rate {
   margin-top: 2em;
-  margin-left: 0em;
+  margin-left: 5em;
 }
 
 .rate-container {
   color: var(--clr-magenta);
   background-color: var(--clr-light-grayish-magenta);
-  width: 70%;
+  width: 68%;
 
-  padding: 0.8em 1em;
+  padding: 0.8em 2em;
 
   font-weight: var(--fw-semi);
   font-size: 0.8em;
