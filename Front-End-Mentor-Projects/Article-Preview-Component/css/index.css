@@ -1,0 +1,231 @@
+:root {
+  --clr-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-dark-blue: hsl(214, 17%, 51%);
+  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
+
+  /* * Fonts */
+  --ff-main: "Manrope", sans-serif;
+  /* --fs-main:  */
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-weight: var(--fw-regular);
+  font-size: 13px;
+
+  background-color: var(--clr-light-grayish-blue);
+}
+h1 {
+  font-size: 1.5em;
+  width: 27ch;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+}
+h1,
+h2 {
+  color: var(--clr-dark-grayish-blue);
+}
+p {
+  color: var(--clr-dark-blue);
+  margin-bottom: 1.5em;
+  width: 45ch;
+}
+.main-container {
+  width: 60em;
+
+  display: flex;
+  flex-flow: nowrap row;
+
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 1em;
+  background: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/* * <-------- IMAGE CONTAINER ------------> */
+.main__image {
+  width: 100%;
+  min-height: 100%;
+}
+.main__image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* * <-------- TEXT CONTAINER ------------> */
+.main__text {
+  padding: 2em 3em 1em;
+}
+
+/* * <-------- TEXT PROFILE CONTAINER ------------> */
+.text__profile {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+}
+.text__profile .avatar {
+  width: 2.9em;
+  height: 2.9em;
+  border-radius: 50%;
+}
+
+.profile__container {
+  display: flex;
+  flex-flow: nowrap row;
+  gap: 1em;
+}
+.text__profile .share {
+}
+.share__container {
+  float: right;
+  width: 2.1em;
+  height: 2.1em;
+  margin-right: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--clr-light-grayish-blue);
+
+  cursor: pointer;
+
+  position: relative;
+
+  overflow: visible;
+}
+.socials {
+  background-color: var(--clr-dark-grayish-blue);
+  color: white;
+
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  padding: 0.3em 0.5em;
+  border-radius: 0.5em;
+  position: absolute;
+  top: -121%;
+  right: -10.8%;
+}
+.socials::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.7em;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--clr-dark-grayish-blue);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.socials__title {
+  letter-spacing: 0.2em;
+}
+.socials img {
+  display: inline-block;
+  margin: 0 0.3em;
+}
+/* ! CODE for arrow */
+/* .share__socials::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.8em;
+  margin: 0 auto;
+  width: 0;
+  height: 0;
+  border-top: 10px solid var(--clr-dark-grayish-blue);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+} */
+
+/* TODO: arrow social comment */
+/* TODO: it should overflow the main-container */
+.profile__info h2 {
+  font-size: 1em;
+}
+.profile__info .date {
+  font-size: 0.9em;
+  color: var(--clr-grayish-blue);
+}
+
+.mobile__container {
+  width: 100%;
+
+  background-color: var(--clr-dark-grayish-blue);
+  position: relative;
+}
+.mobile__socials {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  padding: 1em;
+
+  color: white;
+}
+.mobile__socials img {
+  display: inline-block;
+  margin: 0 0.3em;
+}
+.mobile__share {
+  position: absolute;
+  top: 23%;
+  right: 3%;
+  padding: 0.4em;
+  margin: 0 1em;
+  background-color: white;
+  border-radius: 50%;
+}
+@media screen and (max-width: 800px) {
+  .main-container {
+    width: 50vw;
+    flex-flow: nowrap column;
+  }
+  .main__text {
+    padding: 2em;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  h1,
+  p {
+    width: unset;
+  }
+  p {
+    margin-bottom: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-container {
+    width: 85vw;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main-container {
+    width: 80vw;
+
+    border-radius: 0.5em;
+  }
+  h1 {
+    font-size: 1.175em;
+  }
+  p {
+    font-size: 1em;
+  }
+}
