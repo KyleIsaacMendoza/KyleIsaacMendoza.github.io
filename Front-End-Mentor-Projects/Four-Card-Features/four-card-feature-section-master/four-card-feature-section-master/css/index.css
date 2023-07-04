@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --ff-main: "Poppins", sans-serif;
+  --fs-main: 0.9375rem;
+
+  --fw-200: 200;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --pmy-red: hsl(0, 78%, 62%);
+  --pmy-cyan: hsl(180, 62%, 55%);
+  --pmy-orange: hsl(34, 97%, 64%);
+  --pmy-blue: hsl(212, 86%, 64%);
+
+  --ntrl-dark-blue: hsl(234, 12%, 34%);
+  --ntrl-grayish-blue: hsl(229, 6%, 66%);
+  --ntrl-light-gray: hsl(0, 0%, 98%);
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+}
+span {
+  display: block;
+}
+
+.main-section {
+  width: 80%;
+
+  margin-inline: auto;
+}
+
+.head {
+  text-align: center;
+  margin: 4em 0 5em;
+}
+.regular-title {
+  font-size: 1.45em;
+  color: var(--ntrl-dark-blue);
+  font-weight: 400;
+}
+.bold-title {
+  font-size: 1.5em;
+}
+
+.head p {
+  margin-top: 1em;
+}
+
+.box {
+  padding: 1em;
+  margin: 1.5em 0;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-top: 3px solid;
+}
+.box h2 {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+.box .image-container {
+  text-align: right;
+
+  margin: 1em 1em;
+}
+
+/* Combine CSS with other elements in other class */
+.head p,
+.box p {
+  color: var(--ntrl-grayish-blue);
+}
+.cyan {
+  border-color: var(--pmy-cyan);
+}
+.red {
+  border-color: var(--pmy-red);
+}
+.orange {
+  border-color: var(--pmy-orange);
+}
+.blue {
+  border-color: var(--pmy-blue);
+}
+@media only screen and (min-width: 90rem) {
+  .head p {
+    display: block;
+    margin-inline: auto;
+    width: 45%;
+  }
+  /* This will make .main section into grid with 1/2/3 equal columns */
+  /* And Have 1 gap */
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
+  /* Turn .center into flex with flex direction of column to make the box have up and bottom*/
+  .center {
+    display: flex;
+    flex-direction: column;
+  }
+  .center .box {
+    margin: 0.8em 0;
+  }
+  /* Align-self so that the 1 & 4 box dont follow the height of the center boxes */
+  .box {
+    align-self: center;
+  }
+}
