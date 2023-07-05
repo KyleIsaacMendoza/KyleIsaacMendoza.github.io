@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --ff-main: "Josefin Sans", sans-serif;
+  --fs-main: 1rem;
+
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-600: 600;
+
+  --pmy-desaturated-red: hsl(0, 36%, 70%);
+  --pmy-soft-red: hsl(0, 93%, 68%);
+
+  --ntrl-dark-grayish-red: hsl(0, 6%, 24%);
+
+  /* ### Gradients
+
+    - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    - Linear, 135deg, from */
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+  display: grid;
+  grid-template-rows: 10vh 35vh auto;
+}
+span {
+  display: block;
+
+  font-size: 2em;
+  letter-spacing: 0.4em;
+}
+.heading {
+}
+.heading img {
+  padding: 1.75em;
+}
+.hero {
+  background-image: url("/base-apparel-coming-soon-master/images/hero-mobile.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.regular-title {
+  font-weight: var(--fw-300);
+  line-height: 1.2em;
+}
+.bold-title {
+  font-weight: var(--fw-600);
+  line-height: 1.2em;
+}
+
+.content {
+  text-align: center;
+  padding: 1em;
+}
+
+.content p {
+  margin: 1em 0;
+  line-height: 1.5em;
+}
+
+/* CSS colors fonts */
+.regular-title,
+.content p,
+.input-container {
+  color: var(--pmy-desaturated-red);
+}
+.bold-title {
+  color: var(--ntrl-dark-grayish-red);
+}
+
+.input-container {
+  width: 90%;
+  height: 6vh;
+  margin-inline: auto;
+  margin-top: 2em;
+  border: 1px solid var(--pmy-desaturated-red);
+  border-radius: 25px;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.input-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 10px 20px 1px var(--pmy-soft-red)
+}
+
+.error-img {
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: 35%;
+  left: 70%;
+}
+.error-img,
+.error-text {
+  display: none;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 1em;
+}
+input:focus {
+  outline: none;
+  /* this will remove the yellow outline when clicking the input */
+}
+::placeholder {
+  color: var(--pmy-desaturated-red);
+}
+
+.red {
+  background-color: black;
+}
+
+@media screen and (min-width: 90rem) {
+  html {
+    width: 100vw;
+  }
+  body {
+    width: 100%;
+    grid-template-areas:
+      "heading hero"
+      "content hero";
+    grid-template-rows: 20vh 90vh;
+    grid-template-columns: 50% 50%;
+
+    background-image: url("/base-apparel-coming-soon-master/images/bg-pattern-desktop.svg");
+  }
+  .heading {
+    grid-area: heading;
+
+    padding: 3em 7em;
+  }
+  .hero {
+    grid-area: hero;
+    background-image: url("/base-apparel-coming-soon-master/images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .content {
+    grid-area: content;
+    padding: 3em 9em;
+    text-align: left;
+  }
+
+  .regular-title,
+  .bold-title {
+    font-size: 4em;
+
+    letter-spacing: 0.3em;
+  }
+  .bold-title {
+    font-weight: var(--fw-600);
+  }
+
+  .input-container {
+    width: 100%;
+    margin-top: 3em;
+  }
+}
