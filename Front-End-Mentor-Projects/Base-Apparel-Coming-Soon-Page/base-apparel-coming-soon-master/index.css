@@ -43,7 +43,7 @@ span {
   padding: 1.75em;
 }
 .hero {
-  background-image: url("./images/hero-mobile.jpg");
+  background-image: url("images/hero-mobile.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -145,7 +145,7 @@ input:focus {
     grid-template-rows: 20vh 90vh;
     grid-template-columns: 50% 50%;
 
-    background-image: url("/images/bg-pattern-desktop.svg");
+    background-image: url("images/bg-pattern-desktop.svg");
     background-repeat: no-repeat;
   }
   .heading {
@@ -155,7 +155,7 @@ input:focus {
   }
   .hero {
     grid-area: hero;
-    background-image: url("/images/hero-desktop.jpg");
+    background-image: url("images/hero-desktop.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
