@@ -108,7 +108,7 @@ input[type="submit"]:hover {
 form .terms_and_services {
   display: block;
   font-size: 0.75rem;
-  font-weight: var(--fw-500);
+  font-weight: var(--fw-400);
   color: var(--ntrl-dark-blue);
   text-align: center;
 }
@@ -131,6 +131,13 @@ form .terms {
     padding: 18em 4em 20em 10em;
     text-align: left;
   }
+  .heading span {
+    line-height: 1.3em;
+  }
+  .heading p {
+    display: block;
+    margin-top: 1em;
+  }
   .heading .title {
     font-size: 3em;
   }
@@ -145,7 +152,7 @@ form .terms {
   }
 
   form input {
-    padding: 1.5em;
+    padding: 1.5em 2em;
     margin: 0.7em 0 1.3em;
 
     border: 1px solid rgba(0, 0, 0, 0.2);
