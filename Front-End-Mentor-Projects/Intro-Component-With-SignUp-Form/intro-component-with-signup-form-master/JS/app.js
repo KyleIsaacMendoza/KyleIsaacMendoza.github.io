@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const password = document.getElementsByName("password")[0];
   const submit = document.getElementsByName("submit")[0];
 
-  const image_url = "../images/icon-error.svg";
+  const image_url = "./images/icon-error.svg";
 
   // for email
   const reg_exp =
