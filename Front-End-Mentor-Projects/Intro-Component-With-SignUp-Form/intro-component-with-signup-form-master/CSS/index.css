@@ -1,0 +1,161 @@
+/* Font Import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --ff-main: "Poppins", sans-serif;
+  --fs-main: 1rem;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+
+  --pmy-red: hsl(0, 100%, 74%);
+  --pmy-green: hsl(154, 59%, 51%);
+
+  --acc-blue: hsl(248, 32%, 49%);
+
+  --ntrl-dark-blue: hsl(249, 10%, 26%);
+  --ntrl-green-blue: hsl(246, 25%, 77%);
+}
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+  color: white;
+
+  background-image: url(/intro-component-with-signup-form-master/images/bg-intro-mobile.png);
+  background-color: var(--pmy-red);
+}
+
+.heading {
+  text-align: center;
+  padding: 5em 8% 3.5em;
+}
+
+.heading .title {
+  font-size: 2em;
+  font-weight: var(--fw-700);
+}
+
+.main {
+  padding: 0 8%;
+}
+.main .try {
+  display: block;
+  background-color: var(--acc-blue);
+  color: white;
+  text-decoration: none;
+  padding: 1em 3em;
+  margin: 0 0 1.5em;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 8px 1px rgba(0, 0, 0, 0.19);
+}
+.try:hover b {
+  text-decoration: underline;
+}
+form {
+  padding: 1em 1.5em;
+  background-color: white;
+
+  margin: 0 0 4em;
+  border-radius: 7px;
+  box-shadow: 0px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+form input {
+  width: 100%;
+  display: block;
+  padding: 1.2em;
+  margin: 0.5em 0 1em;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+  font-weight: var(--fw-600);
+  color: var(--ntrl-dark-blue);
+  border: 1px solid var(--pmy-green);
+  /* If you input the border will turn green */
+}
+
+form ::placeholder {
+  font-weight: var(--fw-700);
+}
+input[type="submit"] {
+  font-weight: var(--fw-700);
+  background-color: var(--pmy-green);
+  outline: none;
+  border: none;
+  color: white;
+}
+input[type="submit"]:hover {
+  box-shadow: 1px 4px 1px rgba(0, 0, 0, 0.1), 0px 4px 0px var(--pmy-green);
+}
+
+form .terms_and_services {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: var(--fw-500);
+  color: var(--ntrl-dark-blue);
+  text-align: center;
+}
+form .terms {
+  text-decoration: none;
+  color: var(--pmy-red);
+}
+
+.terms:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 90rem) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background-image: url("/intro-component-with-signup-form-master/images/bg-intro-desktop.png");
+  }
+  .heading {
+    padding: 18em 4em 20em 10em;
+    text-align: left;
+  }
+  .heading .title {
+    font-size: 3em;
+  }
+
+  .main {
+    padding: 8em 11em 5em 1em;
+  }
+
+  form {
+    padding: 1.8em 2em;
+    background-color: white;
+  }
+
+  form input {
+    padding: 1.5em;
+    margin: 0.7em 0 1.3em;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Error Text */
+
+input[type="text"],
+input[type="password"] {
+  background-repeat: no-repeat;
+  background-position: 98% 50%;
+}
