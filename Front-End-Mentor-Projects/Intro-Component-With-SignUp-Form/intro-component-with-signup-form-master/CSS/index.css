@@ -33,7 +33,7 @@ body {
   font-size: var(--fs-main);
   color: white;
 
-  background-image: url(/intro-component-with-signup-form-master/images/bg-intro-mobile.png);
+  background-image: url("../images/bg-intro-mobile.png");
   background-color: var(--pmy-red);
 }
 
@@ -125,7 +125,7 @@ form .terms {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    background-image: url("/intro-component-with-signup-form-master/images/bg-intro-desktop.png");
+    background-image: url("../images/bg-intro-desktop.png");
   }
   .heading {
     padding: 18em 4em 20em 10em;
