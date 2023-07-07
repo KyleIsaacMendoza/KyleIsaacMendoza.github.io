@@ -133,7 +133,7 @@ span {
   }
   main {
     width: 40vw;
-    margin-top: 20%;
+    margin-top: 13%;
     grid-template-areas: "join join" "sub why";
   }
   .join {
