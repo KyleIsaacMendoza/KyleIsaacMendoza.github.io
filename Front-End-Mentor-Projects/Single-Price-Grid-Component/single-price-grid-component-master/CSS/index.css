@@ -27,7 +27,7 @@ body {
   font-family: var(--ff-main);
   font-size: var(--fs-main);
 
-  background-color: var(--ntrl-grayish-blue);
+  background-color: var(--ntrl-light-gray);
   font-weight: var(--fw-400);
 }
 
