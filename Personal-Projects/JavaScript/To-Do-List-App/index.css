@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+main button {
+  border-radius: 15px;
+  background-color: #6eccaf;
+  padding: 0.5em 2em;
+  border: 1px solid #6eccaf;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+}
+main button:hover {
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+main input {
+  border-radius: 15px;
+  padding: 0.5em 1em;
+}
+
+section ul {
+  width: 100%;
+  list-style-type: circle;
+}
+section ul li {
+  display: flex;
+  gap: 3em;
+  margin-bottom: 0.5em;
+  width: 80%;
+  flex-flow: wrap row;
+  justify-content: space-between;
+}
+section ul li span::before {
+  content: "- ";
+}
+section ul li button:hover {
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+section ul li .delete {
+  background-color: #cd1818;
+  padding: 0.5em 2em;
+  border: 1px solid #cd1818;
+  border-radius: 15px;
+  color: white;
+  font-weight: 700;
+  align-self: self-end;
+}
+
+@media (max-width: 90rem) {
+  body {
+    padding-top: 5em;
+  }
+  header,
+  section {
+    width: 80%;
+    margin-inline: auto;
+  }
+  section ul li {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,72 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+body {
+  font-family: $primary-font;
+  font-size: $primary-fontSize;
+}
+header {
+  @include textCenter;
+}
+main {
+  @include textCenter;
+  button {
+    @include borderRadius();
+    @include buttons($add-btn);
+
+    &:hover {
+      @include boxShadow();
+    }
+  }
+  input {
+    @include borderRadius();
+    padding: 0.5em 1em;
+  }
+}
+
+section {
+  ul {
+    width: 100%;
+    list-style-type: circle;
+    li {
+      display: flex;
+      gap: 3em;
+      margin-bottom: 0.5em;
+      width: 80%;
+      flex-flow: wrap row;
+      justify-content: space-between;
+      span::before {
+        content: "- ";
+      }
+      button:hover {
+        @include boxShadow();
+      }
+
+      .delete {
+        @include buttons($del-btn);
+
+        align-self: self-end;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-screen) {
+  body {
+    padding-top: 5em;
+  }
+  header,
+  section {
+    width: 80%;
+    margin-inline: auto;
+  }
+  section {
+    ul {
+      li {
+        width: 80%;
+      }
+      .content {
+      }
+    }
+  }
+}

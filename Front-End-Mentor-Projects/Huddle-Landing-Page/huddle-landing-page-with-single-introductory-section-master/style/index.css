@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  background-color: hsl(257, 40%, 49%);
+}
+body * {
+  color: white;
+}
+
+.hero {
+  width: 100%;
+  height: 44.3vh;
+  background-image: url("../images/bg-mobile.svg");
+  padding: 2em 2.3em 0;
+}
+.hero .hero__logo {
+  margin-bottom: 2.3em;
+}
+.hero .hero__logo img {
+  width: 40%;
+}
+.hero .hero__image img {
+  display: block;
+  width: 100%;
+  height: 28vh;
+}
+
+.content {
+  width: 100%;
+  padding: 2em 2em 0;
+  text-align: center;
+  font-size: 1rem;
+}
+.content .content__title {
+  font-size: 1.55rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.4em;
+}
+.content .content__text {
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+  padding: 0 1em;
+}
+.content .btn-register {
+  display: block;
+  margin: 1.5em 3.5em;
+  padding: 12px;
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+  border-radius: 25px;
+  text-decoration: none;
+  box-shadow: 0px 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.content .btn-register:hover {
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+  box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.icons-footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 4em;
+}
+.icons-footer a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: relative;
+  margin: 0.2em;
+}
+.icons-footer a:hover {
+  border: 1px solid hsl(300, 69%, 71%);
+}
+.icons-footer a:hover i {
+  color: hsl(300, 69%, 71%);
+}
+.icons-footer a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 90rem) {
+  body {
+    background-image: none;
+    background-image: url("../images/bg-desktop.svg");
+    background-size: 92vw 100vh;
+    background-repeat: no-repeat;
+  }
+  .main-container {
+    display: grid;
+    grid-template-areas: "hero main" "hero main" "footer";
+    grid-template-columns: 54% 46%;
+    grid-template-rows: 85vh 15vh;
+  }
+  .hero {
+    display: grid;
+    grid-area: hero;
+    background-image: none;
+    padding: 3em 0em 0em 5em;
+  }
+  .hero .hero__logo {
+    margin-bottom: 6.2em;
+  }
+  .hero .hero__logo img {
+    width: 13em;
+  }
+  .hero .hero__image img {
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    display: grid;
+    grid-area: main;
+    padding: 15em 5em 0 3.5em;
+    text-align: left;
+  }
+  .content .content__title {
+    font-size: 2.7rem;
+  }
+  .content .content__text {
+    font-size: 1.1em;
+  }
+  .content .btn-register {
+    text-align: center;
+    width: 33%;
+    margin: 1em 0;
+    padding: 12px;
+  }
+  .icons-footer {
+    grid-area: footer;
+    width: 175%;
+    text-align: right;
+    margin-top: 3em;
+  }
+  .icons-footer a {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
