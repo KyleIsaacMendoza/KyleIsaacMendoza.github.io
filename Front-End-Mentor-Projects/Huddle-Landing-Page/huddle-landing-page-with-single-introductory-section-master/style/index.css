@@ -127,7 +127,7 @@ body * {
   .content {
     display: grid;
     grid-area: main;
-    padding: 15em 5em 0 3.5em;
+    padding: 15em 5em 0 3em;
     text-align: left;
   }
   .content .content__title {
@@ -135,6 +135,7 @@ body * {
   }
   .content .content__text {
     font-size: 1.1em;
+    padding: 0 1em 0 0;
   }
   .content .btn-register {
     text-align: center;
