@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+// Fonts
+$reg-font: "Roboto-Regular";
+$reg-bold: "Roboto-Bold";
+$fs-main: 1rem;
+$fw-400: 400;
+$fw-700: 700;
+// Colors
+$pmy-tomato: hsl(4, 100%, 67%);
+$ntrl-slate-grey: hsl(234, 29%, 20%);
+$ntrl-charcoal-grey: hsl(235, 18%, 26%);
+$ntrl-grey: hsl(231, 7%, 60%);
+$ntrl-white: hsl(0, 0%, 100%);

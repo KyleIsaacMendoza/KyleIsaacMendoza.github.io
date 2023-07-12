@@ -1,0 +1,235 @@
+@import url("_variables.scss");
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Roboto-Regular";
+  font-size: 1rem;
+}
+body main dialog[open] {
+  display: flex;
+  flex-flow: nowrap column;
+  padding: 1.5em;
+  max-width: 100vw;
+  min-height: 100vh;
+  color: hsl(234, 29%, 20%);
+  position: relative;
+}
+body main dialog[open] h1 {
+  font-size: 2.5em;
+  margin: 0 0 0.8em 0;
+}
+body main dialog[open] .check img {
+  width: 60px;
+  height: 60px;
+  margin: 8em 0 1em;
+}
+body main dialog[open] .dialog-content {
+  line-height: 1.5em;
+  font-size: 1.1em;
+}
+body main dialog[open] .dismiss {
+  display: block;
+  width: 88%;
+  padding: 16px 0;
+  text-align: center;
+  text-decoration: none;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  border-radius: 7px;
+  position: absolute;
+  top: 90%;
+}
+body main dialog[open] .dismiss:hover {
+  background: linear-gradient(90deg, #ff3e83, #fd634a);
+}
+body .main-container {
+  display: grid;
+  grid-template-areas: "hero" "mainContent";
+  grid-auto-flow: column;
+  grid-template-rows: 40vh 60vh;
+}
+body .main-container .hero-container {
+  grid-area: hero;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/illustration-sign-up-mobile.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+body .main-container .main-content {
+  grid-area: mainContent;
+  padding: 0 1.5em;
+  color: hsl(234, 29%, 20%);
+}
+body .main-container .main-content .main__title {
+  font-size: 2.5em;
+  font-family: "Roboto-Bold";
+  margin: 0.3em 0 1.5rem 0;
+}
+body .main-container .main-content ul {
+  list-style-type: none;
+  margin: 2em 0;
+}
+body .main-container .main-content ul li {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: flex-start;
+  line-height: 1.5em;
+  gap: 0.8em;
+  margin: 0 0 0.7em 0;
+}
+body .main-container .main-content form label,
+body .main-container .main-content form input,
+body .main-container .main-content form button {
+  display: block;
+}
+body .main-container .main-content form label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 1em;
+}
+body .main-container .main-content form label .text-error {
+  display: none;
+  color: hsl(4, 100%, 67%);
+}
+body .main-container .main-content form input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 7px;
+  border: 1px solid hsl(231, 7%, 60%);
+  margin: 0 0 1em 0;
+  color: hsl(234, 29%, 20%);
+}
+body .main-container .main-content form input::-moz-placeholder {
+  font-size: 1.3em;
+  color: hsl(231, 7%, 60%);
+}
+body .main-container .main-content form input::placeholder {
+  font-size: 1.3em;
+  color: hsl(231, 7%, 60%);
+}
+body .main-container .main-content form input:focus {
+  outline: none;
+  border: 1px solid hsl(231, 7%, 60%);
+}
+body .main-container .main-content form button {
+  width: 100%;
+  margin-inline: auto;
+  border: none;
+  padding: 16px;
+  font-size: 0.98em;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  background: hsl(234, 29%, 20%);
+}
+body .main-container .main-content form button:hover {
+  background: linear-gradient(90deg, #ff3e83, #fd634a);
+}
+
+@media (min-width: 90rem) {
+  body {
+    background-color: hsl(234, 29%, 20%);
+    position: relative;
+  }
+  body main dialog[open] {
+    max-width: 30vw;
+    min-height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2.5em 3em;
+    border-radius: 25px;
+    color: hsl(234, 29%, 20%);
+    position: relative;
+  }
+  body main dialog[open]::backdrop {
+    background: hsl(234, 29%, 20%);
+  }
+  body main dialog[open] h1 {
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+  }
+  body main dialog[open] .check img {
+    width: 60px;
+    height: 60px;
+    margin: 0em 0 2em;
+  }
+  body main dialog[open] .dialog-content {
+    line-height: 1.5em;
+    font-size: 1em;
+  }
+  body main dialog[open] .dismiss {
+    width: 100%;
+    position: relative;
+    margin: 2em 0 0em;
+  }
+  body .main-container {
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    grid-template-areas: "leftContent rightContent";
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 100%;
+    padding: 1.5em;
+    border-radius: 25px;
+    background: hsl(0, 0%, 100%);
+  }
+  body .main-container article {
+    grid-area: rightContent;
+  }
+  body .main-container article .hero-container {
+    background-image: url("../images/illustration-sign-up-desktop.svg");
+    background-size: cover;
+  }
+  body .main-container section {
+    grid-area: leftContent;
+  }
+  body .main-container section .main-content {
+    padding: 2em 2.5em;
+  }
+  body .main-container section .main-content .main__title {
+    font-size: 3.3em;
+  }
+  body .main-container section .main-content form input,
+  body .main-container section .main-content form button,
+  body .main-container section .main-content form label {
+    width: 95%;
+  }
+  body .main-container section .main-content form input {
+    margin-bottom: 1.5em;
+  }
+  body .main-container section .main-content form button {
+    margin: 0;
+  }
+}/*# sourceMappingURL=index.css.map */

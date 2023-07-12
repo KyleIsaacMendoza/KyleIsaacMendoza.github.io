@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="assets/style/index.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="assets/script/main.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="main-container">
+        <article>
+          <div class="hero-container"></div>
+        </article>
+        <section>
+          <div class="main-content">
+            <h1 class="main__title">Stay updated!</h1>
+            <p class="main__message">
+              Join 60,000+ product managers receiving updates on:
+            </p>
+            <ul>
+              <li>
+                <i class="list-icon"
+                  ><img src="assets/images/icon-list.svg" alt="check-icon" /></i
+                >Product discovery and building what matters
+              </li>
+              <li>
+                <i class="list-icon"
+                  ><img src="assets/images/icon-list.svg" alt="check-icon" /></i
+                >Measuring to ensure updates are a success
+              </li>
+              <li>
+                <i class="list-icon"
+                  ><img src="assets/images/icon-list.svg" alt="check-icon" /></i
+                >And much more!
+              </li>
+            </ul>
+            <form action>
+              <label for="email" aria-label="email label"
+                >Email address
+                <span class="text-error"> Valid Email Required </span></label
+              >
+
+              <input
+                type="text"
+                placeholder="email@company.com"
+                aria-label="email input"
+              />
+
+              <button type="submit">Subscribe to monthly newsletter</button>
+            </form>
+          </div>
+        </section>
+      </div>
+      <!-- Dialog to show if Form is filled and successful -->
+      <dialog class="dialog">
+        <div class="check">
+          <img src="assets/images/icon-success.svg" alt="check-icon" />
+        </div>
+        <h1 class="dialog-title">Thanks for subscribing!</h1>
+        <p class="dialog-content">
+          A confirmation email has been sent to
+          <b class="user-email"></b>. Please open it and click the button inside
+          to confirm your subscription
+        </p>
+        <a class="dismiss" href> Dismiss message </a>
+      </dialog>
+    </main>
+  </body>
+</html>

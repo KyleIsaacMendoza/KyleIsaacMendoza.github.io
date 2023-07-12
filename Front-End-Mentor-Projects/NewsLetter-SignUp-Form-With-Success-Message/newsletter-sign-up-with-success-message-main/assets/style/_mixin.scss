@@ -1,0 +1,6 @@
+@import url("_variables.scss");
+
+@mixin hoverButtons {
+  background: linear-gradient(90deg, #ff3e83, #fd634a);
+  //    background: linear-gradient(173deg, rgba(255,121,218,1) 0%, rgba(214,108,219,1) 39%, rgba(171,94,220,1) 85%, rgba(155,89,220,1) 100%);
+}
