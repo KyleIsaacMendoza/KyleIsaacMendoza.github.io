@@ -154,7 +154,7 @@ body {
     main {
       dialog[open] {
         max-width: 30vw;
-        min-height: 50%;
+        min-height: 30%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -190,7 +190,7 @@ body {
     }
     .main-container {
       width: 60%;
-      height: 70%;
+      height: 55%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -211,6 +211,7 @@ body {
         .hero-container {
           background-image: url("../images/illustration-sign-up-desktop.svg");
           background-size: cover;
+          border-radius: 10px;
         }
       }
       section {
