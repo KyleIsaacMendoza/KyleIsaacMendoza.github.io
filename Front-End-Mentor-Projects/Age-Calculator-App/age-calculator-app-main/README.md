@@ -39,8 +39,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-age-calculator-app-vQuwo2cfv-)
+- Live Site URL: [Add live site URL here](https://kyleisaacmendoza.github.io/Front-End-Mentor-Projects/Age-Calculator-App/age-calculator-app-main/)
 
 ## My process
 
