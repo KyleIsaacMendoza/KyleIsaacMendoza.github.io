@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  width: 100vw;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: hsl(0, 0%, 94%);
+}
+html body main {
+  width: 90%;
+  margin-inline: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 5em 1em 2em;
+  border-radius: 1.5em 1.5em 8em 1.5em;
+}
+html body main form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
+}
+html body main form button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: hsl(259, 100%, 65%);
+  border-radius: 50%;
+  position: absolute;
+  top: 112%;
+  left: 42%;
+}
+html body main form button:hover {
+  background-color: hsl(0, 0%, 8%);
+}
+html body main form button img {
+  width: 50%;
+  margin-inline: auto;
+}
+html body main form .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+html body main form .container .error-title {
+  color: hsl(0, 100%, 67%);
+}
+html body main form .container .error-border {
+  border: 1px solid hsl(0, 100%, 67%) !important;
+}
+html body main form .container .text {
+  display: none;
+  color: hsl(0, 100%, 67%);
+  font-size: 0.75rem;
+  text-align: center;
+}
+html body main form .container label {
+  font-weight: 600;
+  font-style: normal;
+  color: hsl(0, 1%, 44%);
+  letter-spacing: 0.2em;
+}
+html body main form .container input[type=number] {
+  width: 90%;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 0.5em;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 0.3em;
+  margin-bottom: 0.1em;
+}
+html body main form .container input::-moz-placeholder {
+  font-size: 1.5rem;
+}
+html body main form .container input::placeholder {
+  font-size: 1.5rem;
+}
+html body main form .container input:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+  outline: 1px solid hsl(259, 100%, 65%);
+}
+html body main .result-container {
+  border-top: 1px solid hsl(0, 0%, 86%);
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 1.5em;
+  padding-top: 2em;
+  font-style: italic;
+}
+html body main .result-container .result__result {
+  color: hsl(259, 100%, 65%);
+}/*# sourceMappingURL=index.css.map */

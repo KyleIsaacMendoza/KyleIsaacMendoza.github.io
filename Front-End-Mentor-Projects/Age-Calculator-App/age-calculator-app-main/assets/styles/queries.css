@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+@media screen and (min-width: 90rem) {
+  main {
+    width: 53vw !important;
+    border-radius: 1em 1em 10em 1em !important;
+    padding: 3em 3em 2em !important;
+  }
+  main form {
+    width: 80%;
+  }
+  main form .container .text {
+    font-size: 0.9rem !important;
+    text-align: left !important;
+  }
+  main form input {
+    width: 90% !important;
+  }
+  main form button {
+    width: 80px !important;
+    height: 80px !important;
+    top: 107% !important;
+    left: 111% !important;
+  }
+  main .result-container {
+    margin-top: 2em !important;
+    padding-top: 2em;
+    font-style: italic;
+  }
+  main .result-container .result__title {
+    line-height: 1.1em;
+    font-size: 6rem;
+    font-weight: 800;
+  }
+}/*# sourceMappingURL=queries.css.map */

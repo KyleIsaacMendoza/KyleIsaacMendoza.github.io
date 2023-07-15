@@ -1,0 +1,40 @@
+@import "_variables.scss";
+
+@media screen and (min-width: 90rem) {
+  main {
+    width: 53vw !important;
+
+    border-radius: 1em 1em 10em 1em !important;
+    padding: 3em 3em 2em !important;
+
+    form {
+      width: 80%;
+      .container {
+        .text {
+          font-size: 0.9rem !important;
+          text-align: left !important;
+        }
+      }
+      input {
+        width: 90% !important;
+      }
+      button {
+        width: 80px !important;
+        height: 80px !important;
+        top: 107% !important;
+        left: 111% !important;
+      }
+    }
+
+    .result-container {
+      margin-top: 2em !important;
+      padding-top: 2em;
+      font-style: italic;
+      .result__title {
+        line-height: 1.1em;
+        font-size: 6rem;
+        font-weight: $fw-800;
+      }
+    }
+  }
+}

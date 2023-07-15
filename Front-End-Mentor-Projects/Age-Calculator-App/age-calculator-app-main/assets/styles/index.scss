@@ -1,0 +1,111 @@
+@import "_variables.scss";
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  body {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: $ff-main;
+    font-size: $fs-main;
+
+    background-color: $ntrl-off-white;
+    main {
+      width: 90%;
+      margin-inline: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $ntrl-white;
+
+      padding: 5em 1em 2em;
+      border-radius: 1.5em 1.5em 8em 1.5em;
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: relative;
+
+        button {
+          width: 50px;
+          height: 50px;
+          border: none;
+          background-color: $pmy-purple;
+          border-radius: 50%;
+          position: absolute;
+          top: 112%;
+          left: 42%;
+          &:hover {
+            background-color: $ntrl-off-black;
+          }
+          img {
+            width: 50%;
+            margin-inline: auto;
+          }
+        }
+
+        .container {
+          display: flex;
+          flex-direction: column;
+
+          gap: 0.4em;
+          // style when error
+          .error-title {
+            color: $pmy-light-red;
+          }
+          .error-border {
+            border: 1px solid $pmy-light-red !important;
+          }
+          .text {
+            display: none;
+            color: $pmy-light-red;
+            font-size: 0.75rem;
+            text-align: center;
+          }
+          label {
+            font-weight: $fw-700;
+            font-style: normal;
+            color: $ntrl-smoke-grey;
+            letter-spacing: 0.2em;
+          }
+          input {
+            &[type="number"] {
+              width: 90%;
+              font-size: $fs-inputs;
+              font-weight: $fw-700;
+              padding: 0.5em;
+              border: 1px solid $ntrl-light-grey;
+              border-radius: 0.3em;
+              margin-bottom: 0.1em;
+            }
+            &::placeholder {
+              font-size: 1.5rem;
+            }
+            &:focus {
+              border: 1px solid $pmy-purple;
+              outline: 1px solid $pmy-purple;
+            }
+          }
+        }
+      }
+
+      .result-container {
+        border-top: 1px solid $ntrl-light-grey;
+        font-size: 1.5rem;
+        font-weight: $fw-800;
+        margin-top: 1.5em;
+        padding-top: 2em;
+        font-style: italic;
+        .result__result {
+          color: $pmy-purple;
+        }
+      }
+    }
+  }
+}
