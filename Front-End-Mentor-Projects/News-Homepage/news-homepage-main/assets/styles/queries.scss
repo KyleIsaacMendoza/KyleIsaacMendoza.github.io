@@ -1,0 +1,187 @@
+@import "_variables.scss";
+
+@media screen and (min-width: 90rem) {
+  body {
+    padding: 4em !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3;
+    grid-template-areas:
+      "nav nav nav"
+      "hero hero new"
+      "art art art";
+    gap: 1em;
+
+    // header
+    .header {
+      width: 100% !important;
+      grid-area: nav;
+      margin-bottom: 1.5em !important;
+      .nav-logo {
+        img {
+          width: 4rem !important;
+        }
+      }
+      .navbar {
+        .hamburger {
+          display: none !important;
+          button {
+            .hamburger-icon {
+              display: block;
+            }
+          }
+        }
+
+        .nav-menu {
+          display: flex !important;
+          position: relative !important;
+          flex-direction: row !important;
+
+          gap: 2.5em !important;
+          button {
+            display: none;
+            .close-icon {
+              margin-top: 0em;
+              margin-bottom: 4em;
+            }
+          }
+
+          .nav-item {
+            // nav-item / li
+            color: $ntrl-very-dark-blue;
+            font-size: 1.125rem !important;
+
+            .nav-link {
+              text-decoration: none;
+              color: $ntrl-dark-grayish-blue !important;
+            }
+
+            &:hover .nav-link {
+              color: $pmy-soft-red !important;
+            }
+          }
+        }
+      }
+    } //end of header
+
+    //hero container
+    .hero {
+      grid-area: hero;
+
+      //   hero image container
+      * {
+        margin-bottom: 0 !important;
+      }
+
+      h1 {
+        display: inline-block !important;
+        float: left;
+        width: 49% !important;
+
+        font-family: $ff-extrabold;
+        font-size: 3.8rem !important;
+        padding: 0.5em 0.8em 0em 0em !important;
+      }
+      .hero__content {
+        display: block !important;
+        width: 50%;
+        float: left;
+        color: $ntrl-dark-grayish-blue;
+        line-height: 1.75em !important;
+        margin: 2.5em 0 0 !important;
+        p {
+          font-size: 1.2rem !important;
+        }
+        .read-more {
+          margin: 1.5em 0 0 0 !important;
+        }
+      }
+    } // end of hero container
+
+    // latest-news container
+    .latest-news {
+      grid-area: new;
+      margin: 0 0 0 0 !important;
+      padding: 2em 2em 1em !important;
+      h2 {
+        font-size: 3.125rem !important;
+      }
+
+      .latest__content:not(:nth-last-child(1)) {
+        border-bottom: 1px solid $ntrl-off-white;
+        margin-bottom: 1.25em !important;
+      }
+      .latest__content {
+        h1 {
+          a {
+            font-size: 1.53rem !important;
+            font-family: $ff-extrabold;
+            margin-bottom: 0.6em;
+            text-decoration: none;
+            color: $ntrl-off-white;
+            line-height: 1.5em;
+            &:hover {
+              color: $pmy-soft-orange;
+            }
+          }
+        }
+        p {
+          color: $ntrl-grayish-blue;
+          font-size: 1.1rem;
+          line-height: 2em;
+        }
+      }
+    } //end of latest news container
+
+    // numbered contents container
+    .numbered-contents {
+      grid-area: art;
+      margin-top: 3em !important;
+      .numbered__box {
+        display: inline-flex !important;
+        width: 30% !important;
+        flex-direction: row !important;
+
+        margin-bottom: 1.45em;
+        margin-right: 2.48em !important;
+        .box__image {
+          img {
+            width: 100%;
+          }
+        }
+        .box__contents {
+          width: 70%;
+          span,
+          h3 {
+            display: block;
+          }
+          * {
+            margin-bottom: 0.2em;
+          }
+          .box__number {
+            font-family: $ff-extrabold;
+            font-size: 2.5rem !important;
+            color: $ntrl-grayish-blue;
+          }
+          h3 {
+            a {
+              font-family: $ff-extrabold;
+              font-size: 1.25rem !important;
+              color: $ntrl-very-dark-blue;
+              text-decoration: none;
+
+              &:hover {
+                color: $pmy-soft-red;
+              }
+            }
+          }
+          p {
+            color: $ntrl-dark-grayish-blue;
+            font-size: 1.1rem !important;
+            line-height: 1.45em;
+          }
+        }
+      }
+    } // end of numbered contents
+  }
+}

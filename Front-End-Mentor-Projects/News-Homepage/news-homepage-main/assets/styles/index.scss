@@ -1,0 +1,223 @@
+@import "_variables.scss";
+@import "_animation.scss";
+
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  body {
+    max-width: 100vw;
+
+    font-family: $ff-regular;
+    font-size: $fs-main;
+    padding: 1em;
+    color: $ntrl-very-dark-blue;
+
+    p {
+      font-size: $fs-paragraph;
+    }
+
+    // header
+    .header {
+      margin-bottom: 1.5em;
+      .nav-logo {
+        img {
+          width: 3rem;
+        }
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .hamburger {
+          button {
+            outline: none;
+            border: none;
+            background-color: white;
+            .hamburger-icon {
+              display: block;
+            }
+          }
+
+          //   close icon
+        }
+
+        .nav-menu {
+          position: absolute;
+          background-color: $ntrl-off-white;
+          top: 0;
+          right: 0;
+
+          list-style-type: none;
+
+          display: none;
+          flex-direction: column;
+
+          animation: none;
+          height: 100%;
+          padding: 1.125em;
+          gap: 1.5em;
+          z-index: 1;
+          overflow: hidden;
+
+          button {
+            float: right;
+            outline: none;
+            border: none;
+            background-color: white;
+            .close-icon {
+              margin-top: 0em;
+              margin-bottom: 4em;
+            }
+          }
+
+          .nav-item {
+            // nav-item / li
+            color: $ntrl-very-dark-blue;
+            font-size: 1rem;
+
+            .nav-link {
+              text-decoration: none;
+              color: $ntrl-very-dark-blue;
+            }
+
+            &:hover .nav-link {
+              color: $pmy-soft-red;
+            }
+          }
+        }
+      }
+    } //end of header
+
+    //hero container
+    .hero {
+      width: 100%;
+      //   hero image container
+      * {
+        margin-bottom: 0.3em;
+      }
+      .hero__image {
+        img {
+          width: 100%;
+        }
+      }
+      h1 {
+        font-family: $ff-extrabold;
+        font-size: 2.6rem;
+      }
+      .hero__content {
+        color: $ntrl-dark-grayish-blue;
+        line-height: 1.5em;
+      }
+      .read-more {
+        display: inline-block;
+        padding: 1em 2em;
+        text-decoration: none;
+        background-color: $pmy-soft-red;
+        color: $ntrl-off-white;
+        font-family: $ff-bold;
+        margin: 1em 0;
+        letter-spacing: 0.25em;
+
+        &:hover {
+          background-color: $ntrl-very-dark-blue;
+          color: $ntrl-off-white;
+        }
+      }
+    } // end of hero container
+
+    // latest-news container
+    .latest-news {
+      width: 100%;
+      background-color: $ntrl-very-dark-blue;
+      color: $ntrl-off-white;
+      padding: 1.25em;
+      margin: 2.5em 0;
+      h2 {
+        font-size: 2.45rem;
+        font-family: $ff-bold;
+        color: $pmy-soft-orange;
+        margin-bottom: 0.4em;
+      }
+
+      .latest__content:not(:nth-last-child(1)) {
+        border-bottom: 1px solid $ntrl-off-white;
+        margin-bottom: 1.15em;
+      }
+      .latest__content {
+        padding: 0.5em 0 1em;
+        line-height: 1.55em;
+        h1 {
+          a {
+            font-size: 1.25rem;
+            font-family: $ff-extrabold;
+            margin-bottom: 0.6em;
+            text-decoration: none;
+            color: $ntrl-off-white;
+
+            &:hover {
+              color: $pmy-soft-orange;
+            }
+          }
+        }
+        p {
+          color: $ntrl-grayish-blue;
+        }
+      }
+    } //end of latest news container
+
+    // numbered contents container
+    .numbered-contents {
+      .numbered__box {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        gap: 1.75em;
+        margin-bottom: 1.5em;
+        .box__image {
+          width: 30%;
+
+          img {
+            width: 100%;
+          }
+        }
+        .box__contents {
+          width: 70%;
+          span,
+          h3 {
+            display: block;
+          }
+          * {
+            margin-bottom: 0.2em;
+          }
+          .box__number {
+            font-family: $ff-extrabold;
+            font-size: 2rem;
+            color: $ntrl-grayish-blue;
+          }
+          h3 {
+            a {
+              font-family: $ff-extrabold;
+              font-size: 1.15rem;
+              color: $ntrl-very-dark-blue;
+              text-decoration: none;
+
+              &:hover {
+                color: $pmy-soft-red;
+              }
+            }
+          }
+          p {
+            color: $ntrl-dark-grayish-blue;
+            line-height: 1.45em;
+          }
+        }
+      }
+    } // end of numbered contents
+  }
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | News homepage</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="assets/styles/queries.css" />
+    <link rel="stylesheet" href="assets/styles/index.css" />
+    <script src="assets/scripts/navigation.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <!-- logo -->
+        <a href class="nav-logo">
+          <img src="assets/images/logo.svg" alt="website logo" />
+        </a>
+
+        <!-- hamburger -->
+        <div class="hamburger">
+          <button class="hamburger-button">
+            <img
+              class="hamburger-icon"
+              src="assets/images/icon-menu.svg"
+              alt="Menu Image Icon"
+            />
+          </button>
+        </div>
+        <!-- nav menu -->
+
+        <ul class="nav-menu">
+          <div class="close-container">
+            <button class="close-button">
+              <img
+                class="close-icon"
+                src="assets/images/icon-menu-close.svg"
+                alt="Close icon menu"
+              />
+            </button>
+          </div>
+          <li class="nav-item">
+            <a href class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href class="nav-link">New</a>
+          </li>
+          <li class="nav-item">
+            <a href class="nav-link">Popular</a>
+          </li>
+          <li class="nav-item">
+            <a href class="nav-link">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a href class="nav-link">Categories</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="hero">
+      <div class="hero__image">
+        <picture>
+          <source
+            media="(min-width: 90rem)"
+            srcset="assets/images/image-web-3-desktop.jpg"
+          />
+          <img
+            src="assets/images/image-web-3-mobile.jpg"
+            alt="image web picture for mobile"
+          />
+        </picture>
+      </div>
+      <h1>The Bright Future of Web 3.0?</h1>
+      <div class="hero__content">
+        <p>
+          We dive into the next evolution of the web that claims to put the
+          power of the platforms back into the hands of the people. But is it
+          really fulfilling its promise?
+        </p>
+        <a href class="read-more"> READ MORE </a>
+      </div>
+    </section>
+    <section class="latest-news">
+      <h2>New</h2>
+      <div class="latest__content">
+        <h1><a href>Hydrogen VS Electric Cars</a></h1>
+        <p>Will hydrogen-fueled cards ever catch up to EVs?</p>
+      </div>
+      <div class="latest__content">
+        <h1><a href>The Downsides of AI Artistry</a></h1>
+        <p>
+          What are the possible adverse effects of on-demand AI image
+          generation?
+        </p>
+      </div>
+      <div class="latest__content">
+        <h1><a href>Is VS Funding Drying Up?</a></h1>
+        <p>
+          Private funding by VC firms is down 50% YOY. We take a look at what
+          that means.
+        </p>
+      </div>
+    </section>
+    <article class="numbered-contents">
+      <div class="numbered__box">
+        <div class="box__image">
+          <img
+            src="assets/images/image-retro-pcs.jpg"
+            alt="Image of Retro PCs"
+          />
+        </div>
+        <div class="box__contents">
+          <span class="box__number">01</span>
+          <h3><a href>Reviving Retro PCs</a></h3>
+          <p>What happen when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+
+      <div class="numbered__box">
+        <div class="box__image">
+          <img
+            src="assets/images/image-top-laptops.jpg"
+            alt="Image for top 10 laptops of 2022"
+          />
+        </div>
+        <div class="box__contents">
+          <span class="box__number">02</span>
+          <h3><a href>Top 10 Laptops of 2022</a></h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+
+      <div class="numbered__box">
+        <div class="box__image">
+          <img
+            src="assets/images/image-gaming-growth.jpg"
+            alt="Image of the growth of gaming"
+          />
+        </div>
+        <div class="box__contents">
+          <span class="box__number">03</span>
+          <h3><a href>The Growth of Gaming</a></h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/static/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url("../fonts/static/Inter-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/static/Inter-Regular.ttf");
+}
+@keyframes slideOpen {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 16.5%;
+  }
+  50% {
+    width: 33%;
+  }
+  75% {
+    width: 49.5%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+*::before,
+*::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html body {
+  max-width: 100vw;
+  font-family: "Inter-Regular";
+  font-size: 1rem;
+  padding: 1em;
+  color: hsl(240, 100%, 5%);
+}
+html body p {
+  font-size: 0.9375rem;
+}
+html body .header {
+  margin-bottom: 1.5em;
+}
+html body .header .nav-logo img {
+  width: 3rem;
+}
+html body .header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body .header .navbar .hamburger button {
+  outline: none;
+  border: none;
+  background-color: white;
+}
+html body .header .navbar .hamburger button .hamburger-icon {
+  display: block;
+}
+html body .header .navbar .nav-menu {
+  position: absolute;
+  background-color: hsl(36, 100%, 99%);
+  top: 0;
+  right: 0;
+  list-style-type: none;
+  display: none;
+  flex-direction: column;
+  animation: none;
+  height: 100%;
+  padding: 1.125em;
+  gap: 1.5em;
+  z-index: 1;
+  overflow: hidden;
+}
+html body .header .navbar .nav-menu button {
+  float: right;
+  outline: none;
+  border: none;
+  background-color: white;
+}
+html body .header .navbar .nav-menu button .close-icon {
+  margin-top: 0em;
+  margin-bottom: 4em;
+}
+html body .header .navbar .nav-menu .nav-item {
+  color: hsl(240, 100%, 5%);
+  font-size: 1rem;
+}
+html body .header .navbar .nav-menu .nav-item .nav-link {
+  text-decoration: none;
+  color: hsl(240, 100%, 5%);
+}
+html body .header .navbar .nav-menu .nav-item:hover .nav-link {
+  color: hsl(5, 85%, 63%);
+}
+html body .hero {
+  width: 100%;
+}
+html body .hero * {
+  margin-bottom: 0.3em;
+}
+html body .hero .hero__image img {
+  width: 100%;
+}
+html body .hero h1 {
+  font-family: "Inter-ExtraBold";
+  font-size: 2.6rem;
+}
+html body .hero .hero__content {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5em;
+}
+html body .hero .read-more {
+  display: inline-block;
+  padding: 1em 2em;
+  text-decoration: none;
+  background-color: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  font-family: "Inter-Bold";
+  margin: 1em 0;
+  letter-spacing: 0.25em;
+}
+html body .hero .read-more:hover {
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+}
+html body .latest-news {
+  width: 100%;
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  padding: 1.25em;
+  margin: 2.5em 0;
+}
+html body .latest-news h2 {
+  font-size: 2.45rem;
+  font-family: "Inter-Bold";
+  color: hsl(35, 77%, 62%);
+  margin-bottom: 0.4em;
+}
+html body .latest-news .latest__content:not(:nth-last-child(1)) {
+  border-bottom: 1px solid hsl(36, 100%, 99%);
+  margin-bottom: 1.15em;
+}
+html body .latest-news .latest__content {
+  padding: 0.5em 0 1em;
+  line-height: 1.55em;
+}
+html body .latest-news .latest__content h1 a {
+  font-size: 1.25rem;
+  font-family: "Inter-ExtraBold";
+  margin-bottom: 0.6em;
+  text-decoration: none;
+  color: hsl(36, 100%, 99%);
+}
+html body .latest-news .latest__content h1 a:hover {
+  color: hsl(35, 77%, 62%);
+}
+html body .latest-news .latest__content p {
+  color: hsl(233, 8%, 79%);
+}
+html body .numbered-contents .numbered__box {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 1.75em;
+  margin-bottom: 1.5em;
+}
+html body .numbered-contents .numbered__box .box__image {
+  width: 30%;
+}
+html body .numbered-contents .numbered__box .box__image img {
+  width: 100%;
+}
+html body .numbered-contents .numbered__box .box__contents {
+  width: 70%;
+}
+html body .numbered-contents .numbered__box .box__contents span,
+html body .numbered-contents .numbered__box .box__contents h3 {
+  display: block;
+}
+html body .numbered-contents .numbered__box .box__contents * {
+  margin-bottom: 0.2em;
+}
+html body .numbered-contents .numbered__box .box__contents .box__number {
+  font-family: "Inter-ExtraBold";
+  font-size: 2rem;
+  color: hsl(233, 8%, 79%);
+}
+html body .numbered-contents .numbered__box .box__contents h3 a {
+  font-family: "Inter-ExtraBold";
+  font-size: 1.15rem;
+  color: hsl(240, 100%, 5%);
+  text-decoration: none;
+}
+html body .numbered-contents .numbered__box .box__contents h3 a:hover {
+  color: hsl(5, 85%, 63%);
+}
+html body .numbered-contents .numbered__box .box__contents p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.45em;
+}/*# sourceMappingURL=index.css.map */

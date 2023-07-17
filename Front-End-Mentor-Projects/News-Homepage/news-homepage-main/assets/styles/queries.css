@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("../fonts/static/Inter-Bold.ttf");
+}
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url("../fonts/static/Inter-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("../fonts/static/Inter-Regular.ttf");
+}
+@media screen and (min-width: 90rem) {
+  body {
+    padding: 4em !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3;
+    grid-template-areas: "nav nav nav" "hero hero new" "art art art";
+    gap: 1em;
+  }
+  body .header {
+    width: 100% !important;
+    grid-area: nav;
+    margin-bottom: 1.5em !important;
+  }
+  body .header .nav-logo img {
+    width: 4rem !important;
+  }
+  body .header .navbar .hamburger {
+    display: none !important;
+  }
+  body .header .navbar .hamburger button .hamburger-icon {
+    display: block;
+  }
+  body .header .navbar .nav-menu {
+    display: flex !important;
+    position: relative !important;
+    flex-direction: row !important;
+    gap: 2.5em !important;
+  }
+  body .header .navbar .nav-menu button {
+    display: none;
+  }
+  body .header .navbar .nav-menu button .close-icon {
+    margin-top: 0em;
+    margin-bottom: 4em;
+  }
+  body .header .navbar .nav-menu .nav-item {
+    color: hsl(240, 100%, 5%);
+    font-size: 1.125rem !important;
+  }
+  body .header .navbar .nav-menu .nav-item .nav-link {
+    text-decoration: none;
+    color: hsl(236, 13%, 42%) !important;
+  }
+  body .header .navbar .nav-menu .nav-item:hover .nav-link {
+    color: hsl(5, 85%, 63%) !important;
+  }
+  body .hero {
+    grid-area: hero;
+  }
+  body .hero * {
+    margin-bottom: 0 !important;
+  }
+  body .hero h1 {
+    display: inline-block !important;
+    float: left;
+    width: 49% !important;
+    font-family: "Inter-ExtraBold";
+    font-size: 3.8rem !important;
+    padding: 0.5em 0.8em 0em 0em !important;
+  }
+  body .hero .hero__content {
+    display: block !important;
+    width: 50%;
+    float: left;
+    color: hsl(236, 13%, 42%);
+    line-height: 1.75em !important;
+    margin: 2.5em 0 0 !important;
+  }
+  body .hero .hero__content p {
+    font-size: 1.2rem !important;
+  }
+  body .hero .hero__content .read-more {
+    margin: 1.5em 0 0 0 !important;
+  }
+  body .latest-news {
+    grid-area: new;
+    margin: 0 0 0 0 !important;
+    padding: 2em 2em 1em !important;
+  }
+  body .latest-news h2 {
+    font-size: 3.125rem !important;
+  }
+  body .latest-news .latest__content:not(:nth-last-child(1)) {
+    border-bottom: 1px solid hsl(36, 100%, 99%);
+    margin-bottom: 1.25em !important;
+  }
+  body .latest-news .latest__content h1 a {
+    font-size: 1.53rem !important;
+    font-family: "Inter-ExtraBold";
+    margin-bottom: 0.6em;
+    text-decoration: none;
+    color: hsl(36, 100%, 99%);
+    line-height: 1.5em;
+  }
+  body .latest-news .latest__content h1 a:hover {
+    color: hsl(35, 77%, 62%);
+  }
+  body .latest-news .latest__content p {
+    color: hsl(233, 8%, 79%);
+    font-size: 1.1rem;
+    line-height: 2em;
+  }
+  body .numbered-contents {
+    grid-area: art;
+    margin-top: 3em !important;
+  }
+  body .numbered-contents .numbered__box {
+    display: inline-flex !important;
+    width: 30% !important;
+    flex-direction: row !important;
+    margin-bottom: 1.45em;
+    margin-right: 2.48em !important;
+  }
+  body .numbered-contents .numbered__box .box__image img {
+    width: 100%;
+  }
+  body .numbered-contents .numbered__box .box__contents {
+    width: 70%;
+  }
+  body .numbered-contents .numbered__box .box__contents span,
+  body .numbered-contents .numbered__box .box__contents h3 {
+    display: block;
+  }
+  body .numbered-contents .numbered__box .box__contents * {
+    margin-bottom: 0.2em;
+  }
+  body .numbered-contents .numbered__box .box__contents .box__number {
+    font-family: "Inter-ExtraBold";
+    font-size: 2.5rem !important;
+    color: hsl(233, 8%, 79%);
+  }
+  body .numbered-contents .numbered__box .box__contents h3 a {
+    font-family: "Inter-ExtraBold";
+    font-size: 1.25rem !important;
+    color: hsl(240, 100%, 5%);
+    text-decoration: none;
+  }
+  body .numbered-contents .numbered__box .box__contents h3 a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+  body .numbered-contents .numbered__box .box__contents p {
+    color: hsl(236, 13%, 42%);
+    font-size: 1.1rem !important;
+    line-height: 1.45em;
+  }
+}/*# sourceMappingURL=queries.css.map */
