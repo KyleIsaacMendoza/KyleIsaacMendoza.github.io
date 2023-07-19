@@ -1,0 +1,25 @@
+@font-face {
+  font-family: PJS_Medium;
+  src: url("../fonts/static/PlusJakartaSans-Medium.ttf");
+}
+@font-face {
+  font-family: PJS_ExtraBold;
+  src: url("../fonts/static/PlusJakartaSans-ExtraBold.ttf");
+}
+
+// fonts
+$fs-main: 1rem;
+$ff-main: PJS_Medium;
+$ff-bold: PJS_ExtraBold;
+$pmy-red: hsl(1, 90%, 64%);
+$pmy-blue: hsl(219, 85%, 26%);
+
+$ntrl-white: hsl(0, 0%, 100%);
+$ntrl-very-light-grayish-blue: hsl(210, 60%, 98%);
+$ntrl-light-grayish-blue-1: hsl(211, 68%, 94%);
+$ntrl-light-grayish-blue-2: hsl(205, 33%, 90%);
+$ntrl-grayish-blue: hsl(219, 14%, 63%);
+$ntrl-dark-grayish-blue: hsl(219, 12%, 42%);
+$ntrl-very-dark-blue: hsl(224, 21%, 14%);
+
+$screen-1440: 90rem;
